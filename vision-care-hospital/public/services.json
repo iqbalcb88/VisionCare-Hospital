@@ -1,0 +1,50 @@
+ [
+  {
+    "id": 101,
+    "img": "https://i.ibb.co/y6bLkN0/1.png",
+    "name": "Out Patients departments (OPD) Service",
+    "details": "Every Saturday to Thursday open Out Patients departments (OPD) Services. About 220 to 250 patients gathered from different district & Upazila and received treatment on different Eye diseases. Everyday Provide treatment 8 am to 2pm."
+  },
+  {
+    "id": 102,
+    "img": "https://i.ibb.co/1J3w7Zj/2.png",
+    "name": "Pathology Service",
+    "details": "Provide pathological service which patient’s needs Pathology test. BJAKS, Comilla Provide Urine R/E, Blood Sugar (RBS, FBS, GTT), BT,CT, TC,DC, ESR, HB%, Blood group identification, Corneal Scrapping for KOH & Gram stain etc. pathological test by received few rate.."
+  },
+  {
+    "id": 103,
+    "img": "https://i.ibb.co/4VmSRVP/3.png",
+    "name": "Outreach Programme/Eye Camp",
+    "details": "Vision Care organized One day long Outreach Programme in different district, Upazila and Union level and gathered Cataract patients and provide general treatment, provide medicine at free of cost of the Eye patients. Which patients referred for operation BJAKS transported them for surgery.."
+  },
+  {
+    "id": 104,
+    "img": "https://i.ibb.co/x8LH6L5/4.png",
+    "name": "IOL and Others Surgery",
+    "details": "IOL means Intra Ocular Lens. BJAKS Comilla huge number of cataract operation has done and transplant artificial lens. After operation the patient can see the light of world and they returned their normal life."
+  },
+  {
+    "id": 105,
+    "img": "https://i.ibb.co/fdSsX8f/5.png",
+    "name": "Phoco Surgery",
+    "details": "Bangladesh Jatio Kalyan Somiti, Comilla newly include Phaco machine for Cataract surgery. This is a modern technology for Cataract surgery."
+  },
+  {
+    "id": 106,
+    "img": "https://i.ibb.co/FXNFt5t/6.png",
+    "name": "Refraction & Low Vision Service",
+    "details": "Uncorrected refractive errors are the second main of visual impairment and blindness in Bangladesh. Bangladesh is a developing country with a population of over 134 million. There are nearly 1.34 million people blind (VA<3/60 in better eye) in Bangladesh. According to WHO estimation the magnitude of Low Vision (VA< 6/18 in better eye) is three times of the number of blinds. This would represent about 3.9 million people who have low vision in Bangladesh. It  is surprising that we could alleviate a quarter of the blinds and half of the low vision just providing an appropriate pair of glasses. Bangladesh Jatiya Andha Kalyan Somity, Comilla provide free spectacle to the ultra poor and poor peeple."
+  },
+  {
+    "id": 107,
+    "img": "https://i.ibb.co/BjXN6fV/7.png",
+    "name": "Combating Child Hood Blindness Project",
+    "details": "Vision Care has started Bangladesh Child Cataract Campaign (BCCC) programme from 2005. According to the survey per million population 100 Cataract. In Comilla district 5 million Population. So, remain 500 Cataract in our district. Most of people are living under poverty illness. Vision Care are providing Ultra poor and poor Child Cataract operation done at free of cost."
+  },
+  {
+    "id": 108,
+    "img": "https://i.ibb.co/9VbCttW/8.png",
+    "name": "School Sight Testing (SST) Programme",
+    "details": "Bangladesh Jatiya Andha Kalyan Somiti, Comilla Screening School Sight Testing in different school and different upazila in Comilla district.The main objects of the programme is decrease refractive error patients, refer students with eye related problems to base hospital, Conduct orientation for teachers on School Sight testing, Make arrangements for providing spectacles for free of cost."
+  }
+]
