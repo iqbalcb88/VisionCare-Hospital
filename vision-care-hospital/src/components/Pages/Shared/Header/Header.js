@@ -43,10 +43,14 @@ const Header = () => {
             </Nav>
           ) : (
             <Nav>
-              <Nav.Link href='/login'>Login</Nav.Link>
+              <Nav.Link as={Link} to='/login'>
+                Login
+              </Nav.Link>
               <Nav.Link>Or</Nav.Link>
 
-              <Nav.Link href='/register'>Register</Nav.Link>
+              <Nav.Link as={Link} to='/register'>
+                Register
+              </Nav.Link>
             </Nav>
           )}
         </Navbar.Collapse>
