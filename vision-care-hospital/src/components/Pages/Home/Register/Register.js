@@ -56,7 +56,7 @@ const Register = () => {
               className='mb-3 btn btn-outline-primary'
               onClick={handleReg}
               type='submit'
-              value='Login'
+              value='Register'
             />
 
             <br />

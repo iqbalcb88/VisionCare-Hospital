@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 import logo from '../../../../images/logo.png';
@@ -12,8 +12,7 @@ const Header = () => {
   return (
     <Navbar sticky='top' collapseOnSelect expand='lg' bg='dark' variant='dark'>
       <Container>
-        <Navbar.Brand href='/home#home'>
-          {' '}
+        <Navbar.Brand>
           <img className='w-25' src={logo} alt='' /> Vision Care Hospital
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
