@@ -11,26 +11,24 @@ const Slider = () => {
         <Carousel.Item>
           <img className='d-block w-100' src={si1} alt='First slide' />
           <Carousel.Caption className='text-warning opacity-75 '>
-            <h4>First slide label</h4>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h4>CARE YOUR EYES</h4>
+            <p>We work To reduce the curse of blindness in the society</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className='d-block w-100' src={si2} alt='Second slide' />
 
           <Carousel.Caption className='text-danger opacity-75'>
-            <h4>Second slide label</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h4>EYE SAFETY FIRST</h4>
+            <p>Don't hesitate or delay if you feel wrong on eye.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className='d-block w-100' src={si3} alt='Third slide' />
 
           <Carousel.Caption className='text-warning opacity-75'>
-            <h4>Third slide label</h4>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h4>EYES ARE PRICELESS</h4>
+            <p>We always ready to help you to get rid from eyes problem.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

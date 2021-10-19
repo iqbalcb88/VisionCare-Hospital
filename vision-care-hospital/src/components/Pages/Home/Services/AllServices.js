@@ -13,7 +13,7 @@ const AllServices = () => {
 
   return (
     <div id='services' className='services pb-5 services-bg'>
-      <h1 className='text-center text-white-50 py-3 mb-3 bg-dark'>SERVICES</h1>
+      <h1 className='text-center text-info py-3 mb-3 '>SERVICES</h1>
       <Container>
         <Row xs={1} xm={2} md={2} lg={3} className='g-4'>
           {services.map((service) => (
