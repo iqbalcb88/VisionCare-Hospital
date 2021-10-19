@@ -11,7 +11,6 @@ const Services = () => {
       .then((result) => setServices(result));
   }, []);
 
-  console.log(services);
   return (
     <div className='services pb-5 services-bg'>
       <h1 className='text-center text-white-50 py-3 mb-3 bg-dark'>SERVICES</h1>

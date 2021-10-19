@@ -15,3 +15,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.services-bg .welcome-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-photo {
+  width: 35px;
+  border-radius: 50%;
+}

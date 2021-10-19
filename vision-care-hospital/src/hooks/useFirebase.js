@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import initAppAuth from '../Firebase/firebase.init';
 import {
   getAuth,
@@ -9,18 +9,24 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from 'firebase/auth';
+import { useHistory } from 'react-router';
 
 initAppAuth();
 
 const useFirebase = () => {
+  const history = useHistory();
   const [user, setUser] = useState({});
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
   const auth = getAuth();
   const signInWithGoogle = () => {
+    setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
-    signInWithPopup(auth, googleProvider).then((result) => {
-      setUser(result.user);
-    });
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        setUser(result.user);
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const createWithEmailPass = (email, password) => {
@@ -46,23 +52,24 @@ const useFirebase = () => {
   };
 
   const loggedOut = () => {
+    setIsLoading(true);
     signOut(auth)
       .then(() => {
         setUser({});
       })
-      .catch((error) => {
-        setError('error happened while signOut');
-      });
+      .finally(() => setIsLoading(false));
   };
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
       } else {
-        // User is signed out
+        setUser({});
       }
+      setIsLoading(false);
     });
+    return unsubscribed;
   }, []);
 
   return {
@@ -72,6 +79,7 @@ const useFirebase = () => {
     loggedOut,
     createWithEmailPass,
     emailPassLogin,
+    isLoading,
   };
 };
 

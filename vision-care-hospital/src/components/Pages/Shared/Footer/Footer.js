@@ -1,9 +1,7 @@
-import { faMailchimp } from '@fortawesome/free-brands-svg-icons';
 import {
   faEnvelopeOpen,
   faHome,
   faPhone,
-  faVoicemail,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';

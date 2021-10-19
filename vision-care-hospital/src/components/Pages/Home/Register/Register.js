@@ -1,30 +1,29 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useState } from 'react';
+import useFirebase from '../../../../hooks/useFirebase';
 
 const Register = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
-
-  console.log(watch('example')); // watch input value by passing the name of it
-
+  const { createWithEmailPass } = useFirebase();
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
+  const handleEmail = (e) => {
+    e.preventDefault();
+    setEmail(e.target.value);
+  };
+  const handlePass = (e) => {
+    e.preventDefault();
+    setPass(e.target.value);
+  };
+  const handleReg = () => {
+    createWithEmailPass(email, pass);
+  };
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <form onSubmit={handleSubmit(onSubmit)}>
-      {/* register your input into the hook by invoking the "register" function */}
-      <input defaultValue='test' {...register('example')} />
-
-      {/* include validation with required or other standard HTML validation rules */}
-      <input {...register('exampleRequired', { required: true })} />
-      {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
-
-      <input type='submit' />
-    </form>
+    <div className='text-center my-5'>
+      <input onBlur={handleEmail} type='email' name='' id='' />
+      <br />
+      <input onBlur={handlePass} type='password' name='' id='' />
+      <br />
+      <input onClick={handleReg} type='submit' name='' id='' value='Submit' />
+    </div>
   );
 };
 

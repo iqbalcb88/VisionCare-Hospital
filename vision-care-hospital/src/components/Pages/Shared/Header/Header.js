@@ -1,23 +1,36 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import logo from '../../../../images/logo.png';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../../hooks/useAuth';
+import logo from '../../../../images/logo.png';
 
 const Header = () => {
+  const { user, loggedOut } = useAuth();
+  const handleLogOut = () => {
+    loggedOut();
+  };
   return (
-    <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
+    <Navbar sticky='top' collapseOnSelect expand='lg' bg='dark' variant='dark'>
       <Container>
-        <Navbar.Brand href='#home'>
+        <Navbar.Brand href='/home#home'>
           {' '}
           <img className='w-25' src={logo} alt='' /> Vision Care Hospital
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='me-auto'>
-            <Nav.Link href='#home'>Home</Nav.Link>
-            <Nav.Link href='#services'>AboutUs</Nav.Link>
-            <Nav.Link href='#services'>Carrier Training</Nav.Link>
-            <Nav.Link href='#services'>Mission & Vision</Nav.Link>
+            <Nav.Link as={Link} to='/home'>
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to='/about'>
+              AboutUs
+            </Nav.Link>
+            <Nav.Link as={Link} to='/carrier'>
+              Carrier Training
+            </Nav.Link>
+            <Nav.Link as={Link} to='/mission'>
+              Mission & Vision
+            </Nav.Link>
             <NavDropdown
               title='Services'
               menuVariant='dark'
@@ -34,18 +47,23 @@ const Header = () => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav>
-            <Nav.Link href='#deets'>More deets</Nav.Link>
-            <Nav.Link eventKey={2} href='#memes'>
-              Dank memes
-            </Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href='/login'>Login</Nav.Link>
-            <Nav.Link>Or</Nav.Link>
+          {user.displayName || user.email ? (
+            <Nav>
+              <img className='header-photo' src={user.photoURL} alt='' />
 
-            <Nav.Link href='/register'>Register</Nav.Link>
-          </Nav>
+              <Nav.Link eventKey={2} href='#memes'>
+                {user.displayName}
+              </Nav.Link>
+              <input onClick={handleLogOut} type='submit' value='LogOut' />
+            </Nav>
+          ) : (
+            <Nav>
+              <Nav.Link href='/login'>Login</Nav.Link>
+              <Nav.Link>Or</Nav.Link>
+
+              <Nav.Link href='/register'>Register</Nav.Link>
+            </Nav>
+          )}
         </Navbar.Collapse>
       </Container>
     </Navbar>
