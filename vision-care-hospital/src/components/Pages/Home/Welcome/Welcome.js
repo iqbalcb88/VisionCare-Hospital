@@ -1,15 +1,19 @@
 import {
   faAmbulance,
   faCalendarCheck,
+  faDollarSign,
   faMoneyCheck,
   faUserMd,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import doctors from '../../../../images/doctors.png';
 
 const Welcome = () => {
+  const pId = Math.floor(Math.random() * 1000);
+  const uId = Math.floor(Math.random() * 1000 + 1000);
   return (
     <div className='mb-5'>
       <Container>
@@ -60,22 +64,30 @@ const Welcome = () => {
           </Col>
           <Col className='bg-success text-warning opacity-75'>
             <div className='fw-bolder py-4 text-center'>
-              <FontAwesomeIcon
-                className='text-info me-1'
-                icon={faMoneyCheck}
-                size='4x'
-              />
-              <h4 className='py-4'>ONLINE PAYMENT</h4>
+              <p>
+                <FontAwesomeIcon
+                  className='text-info me-1'
+                  icon={faDollarSign}
+                  size='4x'
+                />
+              </p>
+              <Link to={`/payment/${uId}`}>
+                <button className='btn btn-primary'> ONLINE PAYMENT </button>
+              </Link>
             </div>
           </Col>
           <Col className='bg-primary text-white opacity-75'>
             <div className='fw-bolder py-4 text-center'>
-              <FontAwesomeIcon
-                className='text-white me-1'
-                icon={faUserMd}
-                size='4x'
-              />
-              <h4 className='py-4'>ONLINE CONSULTANCY</h4>
+              <p>
+                <FontAwesomeIcon
+                  className='text-white me-1'
+                  icon={faUserMd}
+                  size='4x'
+                />
+              </p>
+              <Link to={`/consultant/${pId}`}>
+                <button className='btn btn-info'>ONLINE CONSULTANCY </button>
+              </Link>
             </div>
           </Col>
           <Col className='bg-danger text-info opacity-75'>

@@ -9,7 +9,8 @@ import AuthProvider from './Context/AuthProvider';
 import ServiceDetails from './components/Pages/ServiceDetails/ServiceDetails';
 import PrivateRoute from './components/Pages/Home/Login/PrivateRoute/PrivateRoute';
 import NotFound from './components/Pages/NotFound/NotFound';
-import Appointment from './components/Pages/Home/Appointment/Appointment';
+import Payment from './components/Pages/Home/Payment/Payment';
+import Consultant from './components/Pages/Home/Consultant/Consultant';
 
 function App() {
   return (
@@ -26,8 +27,11 @@ function App() {
           <Route path='/register'>
             <Register />
           </Route>
-          <PrivateRoute path='/appointment/:patientId'>
-            <Appointment />
+          <PrivateRoute path='/consultant/:patientId'>
+            <Consultant />
+          </PrivateRoute>
+          <PrivateRoute path='/payment/:userId'>
+            <Payment />
           </PrivateRoute>
           <PrivateRoute path='/details/:serviceId'>
             <ServiceDetails />
