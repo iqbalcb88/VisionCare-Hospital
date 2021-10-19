@@ -11,6 +11,9 @@ import PrivateRoute from './components/Pages/Home/Login/PrivateRoute/PrivateRout
 import NotFound from './components/Pages/NotFound/NotFound';
 import Payment from './components/Pages/Home/Payment/Payment';
 import Consultant from './components/Pages/Home/Consultant/Consultant';
+import Vision from './components/Pages/Home/Vision/Vision';
+import Training from './components/Pages/Home/Training/Training';
+import AllServices from './components/Pages/Home/Services/AllServices';
 
 function App() {
   return (
@@ -23,6 +26,15 @@ function App() {
           </Route>
           <Route path='/home'>
             <Home />
+          </Route>
+          <Route path='/vision'>
+            <Vision />
+          </Route>
+          <Route path='/training'>
+            <Training />
+          </Route>
+          <Route path='/allServices'>
+            <AllServices />
           </Route>
           <Route path='/register'>
             <Register />

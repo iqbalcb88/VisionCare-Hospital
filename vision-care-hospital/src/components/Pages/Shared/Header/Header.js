@@ -22,30 +22,15 @@ const Header = () => {
             <Nav.Link as={Link} to='/home'>
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to='/about'>
-              AboutUs
-            </Nav.Link>
-            <Nav.Link as={Link} to='/carrier'>
-              Carrier Training
-            </Nav.Link>
-            <Nav.Link as={Link} to='/mission'>
+            <Nav.Link as={Link} to='/vision'>
               Mission & Vision
             </Nav.Link>
-            <NavDropdown
-              title='Services'
-              menuVariant='dark'
-              id='collasible-nav-dropdown'
-            >
-              <NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
-              <NavDropdown.Item href='#action/3.2'>
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href='#action/3.3'>Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href='#action/3.4'>
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link as={Link} to='/training'>
+              Carrier Training
+            </Nav.Link>
+            <Nav.Link as={Link} to='/allServices'>
+              Services
+            </Nav.Link>
           </Nav>
           {user.displayName || user.email ? (
             <Nav>
