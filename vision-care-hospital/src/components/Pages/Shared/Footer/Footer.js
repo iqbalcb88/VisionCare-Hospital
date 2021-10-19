@@ -12,7 +12,7 @@ import AccordionItem from 'react-bootstrap/esm/AccordionItem';
 
 const Footer = () => {
   return (
-    <div className='bg-light'>
+    <div className='bg-light pt-3'>
       <Container>
         <Row>
           <Col xs={12} md={4}>

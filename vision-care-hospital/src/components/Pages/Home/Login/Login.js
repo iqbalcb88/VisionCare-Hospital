@@ -1,5 +1,11 @@
+import {
+  faGithub,
+  faGooglePlus,
+  faGooglePlusG,
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 import loginImg from '../../../../images/login.png';
@@ -18,7 +24,7 @@ const Login = () => {
     e.preventDefault();
     setPass(e.target.value);
   };
-
+  console.log(email, password);
   const handleSignIn = () => {
     emailPassLogin(email, password);
     document.getElementById('email').value = '';
@@ -34,38 +40,57 @@ const Login = () => {
   console.log(user);
   return (
     <Container>
-      <Row>
-        <Col>
-          <div className=' flex-column d-flex justify-content-center align-items-center my-5 py-5'>
+      <Row xs={1} sm={2} md={2}>
+        <Col className='d-flex justify-content-center'>
+          <div className=' flex-column d-flex justify-content-center align-items-start my-5 py-5'>
             {user.email || user.displayName ? (
               <h6>SuccessFully LoggedIn as {user.displayName || user.email}</h6>
             ) : (
               <h1>Login Please</h1>
             )}
+            <label htmlFor='email'>Email address: </label>
             <input
+              className='mb-3'
               onBlur={handleEmail}
               placeholder='Your Email'
               type='email'
               name='email'
               id='email'
             />
+            <label htmlFor='password'>Password</label>
             <input
+              className='mb-3'
               onBlur={handlePass}
               placeholder='Your Password'
               type='password'
               name='password'
               id='password'
             />
-            <input onClick={handleSignIn} type='submit' value='Login' />
+            <input
+              className='mb-3 btn btn-outline-primary'
+              onClick={handleSignIn}
+              type='submit'
+              value='Login'
+            />
 
-            <button onClick={handleGoogleSignIn}>Sign In With Google</button>
-            <button onClick={signInWithGoogle}>Sign In With GitHub</button>
+            <div>
+              <button
+                className='me-3 btn btn-warning'
+                onClick={handleGoogleSignIn}
+              >
+                <FontAwesomeIcon icon={faGooglePlusG} /> Google
+              </button>
+              <button className='btn btn-dark' onClick={signInWithGoogle}>
+                <FontAwesomeIcon icon={faGithub} /> GitHub
+              </button>
+            </div>
             <br />
             <p>
               New Here <Link to='/register'>Register</Link>{' '}
             </p>
           </div>
         </Col>
+
         <Col>
           <div>
             <img src={loginImg} alt='' />

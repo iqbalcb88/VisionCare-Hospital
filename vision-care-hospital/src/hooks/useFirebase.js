@@ -14,7 +14,6 @@ import { useHistory } from 'react-router';
 initAppAuth();
 
 const useFirebase = () => {
-  const history = useHistory();
   const [user, setUser] = useState({});
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
