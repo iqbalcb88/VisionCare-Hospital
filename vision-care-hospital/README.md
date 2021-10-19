@@ -1,6 +1,6 @@
 # Vision Care Hospital
 
-Live site Link [VisionCare](https://vision-care-hospital.web.app/home).
+Live site Link [VisionCare](https://vision-care-hospital.web.app).
 
 ## Technologies used on this site
 
@@ -15,3 +15,6 @@ Live site Link [VisionCare](https://vision-care-hospital.web.app/home).
 
 - This sites created based on eye care facility.
 - It is an eye hospital website.
+- you can take consultancy online.
+- online payment system
+- online appointment system
