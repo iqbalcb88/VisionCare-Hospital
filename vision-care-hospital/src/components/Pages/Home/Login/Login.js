@@ -13,7 +13,7 @@ import loginImg from '../../../../images/login.png';
 const Login = () => {
   let history = useHistory();
   let location = useLocation();
-  const { signInWithGoogle, emailPassLogin, user } = useAuth();
+  const { signInWithGoogle, emailPassLogin, user, error } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPass] = useState('');
   const handleEmail = (e) => {
@@ -37,7 +37,7 @@ const Login = () => {
       history.replace(from);
     });
   };
-  console.log(user);
+  console.log(error);
   return (
     <Container>
       <Row xs={1} sm={2} md={2}>
@@ -66,6 +66,7 @@ const Login = () => {
               name='password'
               id='password'
             />
+            <p>{error}</p>
             <input
               className='mb-3 btn btn-outline-primary'
               onClick={handleSignIn}

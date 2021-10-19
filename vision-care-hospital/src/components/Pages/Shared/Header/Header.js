@@ -52,7 +52,7 @@ const Header = () => {
               <img className='header-photo' src={user.photoURL} alt='' />
 
               <Nav.Link eventKey={2} href='#memes'>
-                {user.displayName}
+                {user.displayName || user.email}
               </Nav.Link>
               <input onClick={handleLogOut} type='submit' value='LogOut' />
             </Nav>
