@@ -94,7 +94,7 @@ const Login = () => {
 
         <Col>
           <div>
-            <img src={loginImg} alt='' />
+            <img className='img-fluid' src={loginImg} alt='' />
           </div>
         </Col>
       </Row>
