@@ -52,8 +52,8 @@ const Welcome = () => {
       </Container>
       <Container fluid>
         <Row xs={1} md={2} lg={4} className='welcome-bg'>
-          <Col className='bg-info text-dark opacity-75'>
-            <div className='fw-bolder py-4 text-center'>
+          <Col className='bg-info text-dark opacity-75 '>
+            <div className='fw-bolder py-4 text-center hover-style'>
               <FontAwesomeIcon
                 className='text-warning me-1'
                 icon={faAmbulance}
@@ -63,7 +63,7 @@ const Welcome = () => {
             </div>
           </Col>
           <Col className='bg-success text-warning opacity-75'>
-            <div className='fw-bolder py-4 text-center'>
+            <div className='fw-bolder py-4 text-center hover-style'>
               <p>
                 <FontAwesomeIcon
                   className='text-info me-1'
@@ -77,7 +77,7 @@ const Welcome = () => {
             </div>
           </Col>
           <Col className='bg-primary text-white opacity-75'>
-            <div className='fw-bolder py-4 text-center'>
+            <div className='fw-bolder py-4 text-center hover-style'>
               <p>
                 <FontAwesomeIcon
                   className='text-white me-1'
@@ -91,7 +91,7 @@ const Welcome = () => {
             </div>
           </Col>
           <Col className='bg-danger text-info opacity-75'>
-            <div className='fw-bolder py-4 text-center'>
+            <div className='fw-bolder py-4 text-center hover-style'>
               <FontAwesomeIcon
                 className='text-info me-1'
                 icon={faCalendarCheck}

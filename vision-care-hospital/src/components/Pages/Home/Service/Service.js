@@ -8,7 +8,7 @@ const Service = ({ service }) => {
   return (
     <div>
       <Col>
-        <Card>
+        <Card className='card-hover'>
           <Card.Img variant='top' src={img} />
           <Card.Header>{name}</Card.Header>
           <Card.Body>

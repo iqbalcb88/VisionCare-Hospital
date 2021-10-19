@@ -26,3 +26,13 @@
   width: 35px;
   border-radius: 50%;
 }
+.hover-style:hover {
+  transform: translateY(-5px) scale(0.9);
+  transition: ease-in-out 0.5s;
+}
+.card-hover:hover {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  transform: scale(1.025);
+  transition: ease 0.5s;
+}
