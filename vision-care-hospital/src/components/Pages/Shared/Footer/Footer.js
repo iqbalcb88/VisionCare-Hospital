@@ -9,6 +9,7 @@ import { Accordion, Col, Container, Row, Table } from 'react-bootstrap';
 import AccordionBody from 'react-bootstrap/esm/AccordionBody';
 import AccordionHeader from 'react-bootstrap/esm/AccordionHeader';
 import AccordionItem from 'react-bootstrap/esm/AccordionItem';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -21,21 +22,21 @@ const Footer = () => {
               <AccordionItem eventKey='0'>
                 <AccordionHeader>Sunday</AccordionHeader>
                 <AccordionBody>
-                  <p>Duration: 8-00 am to 2.00 pm </p>
+                  <p>Duration: 8-00 am to 5.00 pm </p>
                   <p>Registration: 8-00 am to 1.00 pm</p>
                 </AccordionBody>
               </AccordionItem>
               <AccordionItem eventKey='1'>
                 <AccordionHeader>Monday</AccordionHeader>
                 <AccordionBody>
-                  <p>Duration: 8-00 am to 2.00 pm </p>
+                  <p>Duration: 8-00 am to 5.00 pm </p>
                   <p>Registration: 8-00 am to 1.00 pm</p>
                 </AccordionBody>
               </AccordionItem>
               <AccordionItem eventKey='2'>
                 <AccordionHeader>Tuesday</AccordionHeader>
                 <AccordionBody>
-                  <p>Duration: 8-00 am to 2.00 pm </p>
+                  <p>Duration: 8-00 am to 5.00 pm </p>
                   <p>Registration: 8-00 am to 1.00 pm</p>
                 </AccordionBody>
               </AccordionItem>
@@ -60,20 +61,80 @@ const Footer = () => {
             <Table striped bordered hover>
               <tbody>
                 <tr>
-                  <td>CarrierTraining</td>
-                  <td>Lenses</td>
+                  <td>
+                    <Link
+                      className='text-decoration-none text-muted'
+                      className='text-decoration-none text-muted'
+                      to='/training'
+                    >
+                      CarrierTraining
+                    </Link>
+                  </td>
+                  <td>
+                    <Link
+                      className='text-decoration-none text-muted'
+                      to='/shop'
+                    >
+                      Lenses
+                    </Link>
+                  </td>
                 </tr>
                 <tr>
-                  <td>Drops</td>
-                  <td>Lasik</td>
+                  <td>
+                    {' '}
+                    <Link
+                      className='text-decoration-none text-muted'
+                      to='/shop'
+                    >
+                      Drops
+                    </Link>
+                  </td>
+                  <td>
+                    <Link
+                      className='text-decoration-none text-muted'
+                      to='/allServices'
+                    >
+                      Lasik
+                    </Link>
+                  </td>
                 </tr>
                 <tr>
-                  <td>Team</td>
-                  <td>Alphabetical</td>
+                  <td>
+                    <Link
+                      className='text-decoration-none text-muted'
+                      to='/home'
+                    >
+                      Team
+                    </Link>
+                  </td>
+                  <td>
+                    {' '}
+                    <Link
+                      className='text-decoration-none text-muted'
+                      to='/allServices'
+                    >
+                      Alphabetical
+                    </Link>
+                  </td>
                 </tr>
                 <tr>
-                  <td>Eye Glass</td>
-                  <td>Eye Frames</td>
+                  <td>
+                    <Link
+                      className='text-decoration-none text-muted'
+                      to='/shop'
+                    >
+                      Eye Glass
+                    </Link>
+                  </td>
+                  <td>
+                    <Link
+                      className='text-decoration-none text-muted'
+                      to='/shop'
+                    >
+                      {' '}
+                      Eye Frames
+                    </Link>
+                  </td>
                 </tr>
               </tbody>
             </Table>
